@@ -1,0 +1,143 @@
+Release 14.7 par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+USER-LPS::  Mon May 18 11:44:55 2015
+
+par -w -intstyle ise -ol high -mt off my_adder_map.ncd my_adder.ncd
+my_adder.pcf 
+
+
+Constraints file: my_adder.pcf.
+Loading device for application Rf_Device from file '7z020.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+   "my_adder" is an NCD, version 3.2, device xc7z020, package clg484, speed -1
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.08 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+   Number of BUFGs                           1 out of 32      3%
+   Number of External IOBs                  90 out of 200    45%
+      Number of LOCed IOBs                   0 out of 90      0%
+
+   Number of Slices                         36 out of 13300   1%
+   Number of Slice Registers               120 out of 106400  1%
+      Number used as Flip Flops            120
+      Number used as Latches                 0
+      Number used as LatchThrus              0
+
+   Number of Slice LUTS                    124 out of 53200   1%
+   Number of Slice LUT-Flip Flop pairs     124 out of 53200   1%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 18 secs 
+Finished initial Timing Analysis.  REAL time: 18 secs 
+
+Starting Router
+
+
+Phase  1  : 721 unrouted;      REAL time: 18 secs 
+
+Phase  2  : 685 unrouted;      REAL time: 19 secs 
+
+Phase  3  : 175 unrouted;      REAL time: 19 secs 
+
+Phase  4  : 175 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
+
+Updating file: my_adder.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
+Total REAL time to Router completion: 22 secs 
+Total CPU time to Router completion: 15 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|    S_AXI_ACLK_BUFGP | BUFGCTRL_X0Y0| No   |   35 |  0.076     |  1.698      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net S_A | SETUP       |         N/A|     2.402ns|     N/A|           0
+  XI_ACLK_BUFGP                             | HOLD        |     0.051ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 23 secs 
+Total CPU time to PAR completion: 16 secs 
+
+Peak Memory Usage:  675 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 1
+
+Writing design to file my_adder.ncd
+
+
+
+PAR done!

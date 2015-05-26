@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "C:/Users/user/Desktop/ZED_LAB/LED_CTR/LED_CTR.srcs/sources_1/edk/system/pcores/my_adder_v1_00_a/devl/projnav/my_adder.xst" -ofn "C:/Users/user/Desktop/ZED_LAB/LED_CTR/LED_CTR.srcs/sources_1/edk/system/pcores/my_adder_v1_00_a/devl/projnav/my_adder.syr" 
+xst -intstyle ise -ifn "C:/Users/user/Desktop/ZED_LAB/LED_CTR/LED_CTR.srcs/sources_1/edk/system/pcores/my_adder_v1_00_a/devl/projnav/my_adder.xst" -ofn "C:/Users/user/Desktop/ZED_LAB/LED_CTR/LED_CTR.srcs/sources_1/edk/system/pcores/my_adder_v1_00_a/devl/projnav/my_adder.syr" 
+xst -intstyle ise -ifn "C:/Users/user/Desktop/ZED_LAB/LED_CTR/LED_CTR.srcs/sources_1/edk/system/pcores/my_adder_v1_00_a/devl/projnav/my_adder.xst" -ofn "C:/Users/user/Desktop/ZED_LAB/LED_CTR/LED_CTR.srcs/sources_1/edk/system/pcores/my_adder_v1_00_a/devl/projnav/my_adder.syr" 
+xst -intstyle ise -ifn "C:/Users/user/Desktop/ZED_LAB/LED_CTR/LED_CTR.srcs/sources_1/edk/system/pcores/my_adder_v1_00_a/devl/projnav/my_adder.xst" -ofn "C:/Users/user/Desktop/ZED_LAB/LED_CTR/LED_CTR.srcs/sources_1/edk/system/pcores/my_adder_v1_00_a/devl/projnav/my_adder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7z020-clg484-1 my_adder.ngc my_adder.ngd  
+map -intstyle ise -p xc7z020-clg484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o my_adder_map.ncd my_adder.ngd my_adder.pcf 
+par -w -intstyle ise -ol high -mt off my_adder_map.ncd my_adder.ncd my_adder.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml my_adder.twx my_adder.ncd -o my_adder.twr my_adder.pcf 
+xst -intstyle ise -ifn "C:/Users/user/Desktop/ZED_LAB/LED_CTR/LED_CTR.srcs/sources_1/edk/system/pcores/my_adder_v1_00_a/devl/projnav/my_adder.xst" -ofn "C:/Users/user/Desktop/ZED_LAB/LED_CTR/LED_CTR.srcs/sources_1/edk/system/pcores/my_adder_v1_00_a/devl/projnav/my_adder.syr" 

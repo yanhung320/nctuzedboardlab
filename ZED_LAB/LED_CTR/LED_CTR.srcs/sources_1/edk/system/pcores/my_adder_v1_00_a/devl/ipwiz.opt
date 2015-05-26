@@ -1,0 +1,10 @@
+-batch 
+-create my_adder 
+-ver 1.00.a 
+-dir "C:\Users\user\Desktop\ZED_LAB\LED_CTR\LED_CTR.srcs\sources_1\edk\system" 
+-lang verilog 
+-bus axi4lite s 
+-reg 2 
+-xps 
+-ise 
+-driver 

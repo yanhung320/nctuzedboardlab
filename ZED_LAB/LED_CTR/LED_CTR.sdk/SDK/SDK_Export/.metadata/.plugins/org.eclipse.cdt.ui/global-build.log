@@ -1,0 +1,1123 @@
+19:06:16 **** Build of project helloworld_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+19:06:48 **** Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22872	   1096	  29780	  53748	   d1f4	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:08:41 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:09:29 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:45:5: warning: implicit declaration of function 'xil_print' [-Wimplicit-function-declaration]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+C:\Users\user\Desktop\ZED_LAB\LED_CTR\LED_CTR.sdk\SDK\SDK_Export\helloworld\Debug/../src/helloworld.c:45: undefined reference to `xil_print'
+collect2.exe: error: ld returned 1 exit status
+make: *** [helloworld.elf] Error 1
+19:09:48 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:46:5: warning: implicit declaration of function 'xil_print' [-Wimplicit-function-declaration]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+C:\Users\user\Desktop\ZED_LAB\LED_CTR\LED_CTR.sdk\SDK\SDK_Export\helloworld\Debug/../src/helloworld.c:46: undefined reference to `xil_print'
+collect2.exe: error: ld returned 1 exit status
+make: *** [helloworld.elf] Error 1
+19:09:54 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:46:5: warning: implicit declaration of function 'xil_print' [-Wimplicit-function-declaration]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+C:\Users\user\Desktop\ZED_LAB\LED_CTR\LED_CTR.sdk\SDK\SDK_Export\helloworld\Debug/../src/helloworld.c:46: undefined reference to `xil_print'
+collect2.exe: error: ld returned 1 exit status
+make: *** [helloworld.elf] Error 1
+19:10:08 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:45:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24880	   1096	  29796	  55772	   d9dc	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:10:45 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:45:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:46:5: error: 'value' undeclared (first use in this function)
+../src/helloworld.c:46:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:46:5: warning: implicit declaration of function 'inbyte' [-Wimplicit-function-declaration]
+make: *** [src/helloworld.o] Error 1
+19:10:59 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:37:6: error: conflicting types for 'print'
+In file included from ../../helloworld_bsp/ps7_cortexa9_0/include/xil_io.h:74:0,
+                 from ../../helloworld_bsp/ps7_cortexa9_0/include/xgpio_l.h:93,
+                 from ../../helloworld_bsp/ps7_cortexa9_0/include/xgpio.h:126,
+                 from ../src/helloworld.c:36:
+../../helloworld_bsp/ps7_cortexa9_0/include/xil_printf.h:39:6: note: previous declaration of 'print' was here
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:46:5: error: 'value' undeclared (first use in this function)
+../src/helloworld.c:46:5: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+19:11:02 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:46:5: error: 'value' undeclared (first use in this function)
+../src/helloworld.c:46:5: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+19:11:15 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:46:5: error: 'value' undeclared (first use in this function)
+../src/helloworld.c:46:5: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+19:11:58 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:46:5: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'int' [-Wformat]
+../src/helloworld.c:46:5: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'int' [-Wformat]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  80620	   2304	  30124	 113048	  1b998	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:12:02 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:44:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:45:5: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'int' [-Wformat]
+../src/helloworld.c:45:5: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'int' [-Wformat]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  80620	   2304	  30124	 113048	  1b998	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:12:32 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:44:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  80652	   2304	  30124	 113080	  1b9b8	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:12:37 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:13:40 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:44:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  80708	   2304	  30124	 113136	  1b9f0	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:13:44 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:14:32 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:44:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  80732	   2304	  30124	 113160	  1ba08	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:14:36 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:15:11 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:44:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  80748	   2304	  30124	 113176	  1ba18	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:15:15 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:15:41 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:44:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  80660	   2304	  30124	 113088	  1b9c0	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:15:48 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:16:21 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:16:48 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:17:20 **** Clean-only build of configuration Debug for project helloworld ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  helloworld.elf.size  helloworld.elf
+' '
+19:17:20 **** Clean-only build of project helloworld_bsp ****
+make -k clean 
+rm -rf ps7_cortexa9_0
+19:17:22 **** Build of project helloworld_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+19:17:39 **** Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:44:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  80660	   2304	  30124	 113088	  1b9c0	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:17:50 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:18:24 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:18:53 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:44:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  80620	   2304	  30124	 113048	  1b998	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:18:57 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:37:56 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:39:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:39:2: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+../src/helloworld.c:33:6: warning: unused variable 'value' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63660	   2280	  29884	  95824	  17650	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:38:03 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:44:20 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:39:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:39:2: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+../src/helloworld.c:33:6: warning: unused variable 'value' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63660	   2280	  29884	  95824	  17650	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:44:59 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:39:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:39:2: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+../src/helloworld.c:33:6: warning: unused variable 'value' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63660	   2280	  29884	  95824	  17650	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:45:15 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:39:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:39:2: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+../src/helloworld.c:49:9: warning: unused variable 'init_value' [-Wunused-variable]
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+../src/helloworld.c:33:6: warning: unused variable 'value' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63668	   2280	  29884	  95832	  17658	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:45:27 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:39:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:39:2: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+../src/helloworld.c:33:6: warning: unused variable 'value' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65716	   2288	  29884	  97888	  17e60	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:45:33 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:46:22 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:39:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:39:2: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+../src/helloworld.c:33:6: warning: unused variable 'value' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65804	   2288	  29884	  97976	  17eb8	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:46:27 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:49:17 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:71:3: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+../src/helloworld.c:33:6: warning: unused variable 'value' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65804	   2288	  29884	  97976	  17eb8	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:49:27 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:49:42 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:73:3: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+../src/helloworld.c:33:6: warning: variable 'value' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65816	   2288	  29884	  97988	  17ec4	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:50:58 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:76:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:76:3: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65848	   2288	  29884	  98020	  17ee4	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:51:05 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:51:30 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:52:00 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:76:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:76:3: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65944	   2288	  29884	  98116	  17f44	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:52:04 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:52:32 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:78:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:78:3: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65984	   2288	  29884	  98156	  17f6c	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:52:39 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:76:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:76:3: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65944	   2288	  29884	  98116	  17f44	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:52:42 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:53:11 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:77:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:77:3: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65960	   2288	  29884	  98132	  17f54	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:53:25 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:54:07 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:77:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:77:3: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: variable 'period' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65960	   2288	  29884	  98132	  17f54	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:54:13 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+19:57:05 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:77:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:77:3: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: variable 'period' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66056	   2288	  29884	  98228	  17fb4	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:57:16 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:74:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:74:3: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+../src/helloworld.c:33:6: warning: unused variable 'value' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65900	   2288	  29884	  98072	  17f18	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+19:57:20 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+20:01:38 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:74:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:74:3: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+../src/helloworld.c:33:6: warning: unused variable 'value' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65900	   2288	  29884	  98072	  17f18	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+20:01:42 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+20:01:55 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:74:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/helloworld.c:74:3: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+../src/helloworld.c:33:6: warning: unused variable 'value' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65900	   2288	  29884	  98072	  17f18	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+20:01:59 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+20:02:56 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+../src/helloworld.c:33:6: warning: unused variable 'value' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26668	   1120	  29812	  57600	   e100	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+20:03:00 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+20:03:25 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+../src/helloworld.c:33:6: warning: unused variable 'value' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26680	   1120	  29812	  57612	   e10c	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+20:03:29 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+20:04:14 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+../src/helloworld.c:33:6: warning: unused variable 'value' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26748	   1120	  29812	  57680	   e150	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+20:04:17 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+20:04:31 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+../src/helloworld.c:33:6: warning: unused variable 'value' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26744	   1120	  29812	  57676	   e14c	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+20:04:35 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+20:05:28 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+../src/helloworld.c:33:6: warning: unused variable 'value' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26744	   1120	  29812	  57676	   e14c	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+20:05:32 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+20:06:06 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+20:06:48 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+../src/helloworld.c:33:6: warning: unused variable 'value' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26744	   1120	  29812	  57676	   e14c	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+20:06:58 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+20:07:27 **** Auto Build of configuration Debug for project helloworld ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../helloworld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'beightness' [-Wunused-variable]
+../src/helloworld.c:34:6: warning: unused variable 'period' [-Wunused-variable]
+../src/helloworld.c:33:6: warning: unused variable 'value' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: helloworld.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: helloworld.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size helloworld.elf  |tee "helloworld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26744	   1120	  29812	  57676	   e14c	helloworld.elf
+'Finished building: helloworld.elf.size'
+' '
+20:07:34 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.
+20:08:03 **** Incremental Build of configuration Debug for project helloworld ****
+make all 
+make: Nothing to be done for `all'.

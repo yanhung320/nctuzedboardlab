@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "C:\Users\user\Desktop\ZED_LAB\LED_CTR\LED_CTR.srcs\sources_1\edk\system\pcores\my_adder_v1_00_a\devl\synthesis\my_adder_xst.prj"
+-top my_adder
+-p virtex6
+-ofn "C:\Users\user\Desktop\ZED_LAB\LED_CTR\LED_CTR.srcs\sources_1\edk\system\pcores\my_adder_v1_00_a\devl\synthesis\my_adder_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib my_adder_v1_00_a

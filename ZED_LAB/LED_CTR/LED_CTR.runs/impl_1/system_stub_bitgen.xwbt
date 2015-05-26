@@ -1,0 +1,8 @@
+INTSTYLE=pa
+INFILE=C:\Users\user\Desktop\ZED_LAB\LED_CTR\LED_CTR.runs\impl_1\system_stub_routed.ncd
+OUTFILE=C:\Users\user\Desktop\ZED_LAB\LED_CTR\LED_CTR.runs\impl_1\system_stub.bit
+FAMILY=Zynq
+PART=xc7z020-1clg484
+WORKINGDIR=C:\Users\user\Desktop\ZED_LAB\LED_CTR\LED_CTR.runs\impl_1
+LICENSE=ISE
+USER_INFO=210651217_200013009_210588604_406

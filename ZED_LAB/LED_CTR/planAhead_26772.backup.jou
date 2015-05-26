@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Tue May 26 13:55:17 2015
+# Process ID: 50288
+# Log file: C:/Users/user/Desktop/ZED_LAB/LED_CTR/planAhead.log
+# Journal file: C:/Users/user/Desktop/ZED_LAB/LED_CTR\planAhead.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:\Users\user\Desktop\ZED_LAB\LED_CTR\LED_CTR.ppr}
+launch_runs synth_1
+generate_target  {synthesis simulation implementation}  [get_files  C:/Users/user/Desktop/ZED_LAB/LED_CTR/LED_CTR.srcs/sources_1/edk/system/system.xmp]
+make_wrapper -files [get_files C:/Users/user/Desktop/ZED_LAB/LED_CTR/LED_CTR.srcs/sources_1/edk/system/system.xmp] -top -fileset [get_filesets sources_1] -import
+launch_runs synth_1
